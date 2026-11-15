@@ -79,7 +79,11 @@ Output (`facebook/bart-large-cnn`):
 The decision follows a pilot programme in which twelve electric buses ran on the busiest routes for eighteen months. Officials said the pilot cut fuel and maintenance costs by almost a third compared with diesel buses on the same lines. Drivers also reported that the vehicles were quieter and easier to handle in heavy traffic.
 ```
 
-**Observation:** the model copies sentences from the start of the article and leaves out the main news (the approved fleet plan), the 7-2 vote details beyond the first paragraph, the cost and the objections. This is typical for models trained on news data (CNN/DailyMail), where the key facts usually come first.
+**Observation:**
+- Both runs mostly copy sentences from the start of the article instead of rewriting it.
+- The result depends on the input formatting: the command-line run (text with normalized spaces) starts at the second sentence, while the notebook run (text with paragraph breaks) starts with the first sentence about the approved fleet plan.
+- Decoding settings change the focus: with `num_beams=1` the summary covers the second paragraph (delivery schedule and cost), with `num_beams=4` it covers the first paragraph. Beam search with 4 beams was about 2x slower (4.1 s vs 1.8 s on a T4 GPU).
+- This is typical for models trained on news data (CNN/DailyMail), where key facts usually come first.
 ## Parameters
 
 | Parameter | Meaning |
