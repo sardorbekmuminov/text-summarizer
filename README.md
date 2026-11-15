@@ -1,5 +1,5 @@
 # Text Summarizer (BART, Hugging Face Transformers)
-
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/sardorbekmuminov/text-summarizer/blob/main/text_summarization_colab.ipynb)
 Abstractive English text summarization with a pretrained BART encoder-decoder model.
 Paste a text, get a short summary. Includes a command-line tool, a small Python API and a Gradio web demo.
 
