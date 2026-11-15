@@ -27,7 +27,7 @@ Note: `pipeline("summarization")` was removed in transformers v5, so this projec
 Python 3.10+ is required.
 
 ```bash
-git clone https://github.com/<your-username>/text-summarizer.git
+git clone https://github.com/sardorbekmuminov/text-summarizer.git
 cd text-summarizer
 pip install -r requirements.txt
 ```
@@ -61,7 +61,7 @@ Then open the local URL printed in the terminal. In Google Colab the demo prints
 **Google Colab**
 
 ```python
-!git clone https://github.com/<your-username>/text-summarizer.git
+!git clone https://github.com/sardorbekmuminov/text-summarizer.git
 %cd text-summarizer
 !pip install -q -r requirements.txt
 !python summarizer.py --file sample_article.txt
