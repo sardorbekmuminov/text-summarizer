@@ -71,16 +71,15 @@ Use a GPU runtime (`Runtime -> Change runtime type -> T4 GPU`) for faster genera
 
 ## Example
 
-<!-- Replace this section with your real input/output and a screenshot of the demo -->
-
 Input: `sample_article.txt`
 
-Output:
+Output (`facebook/bart-large-cnn`):
 
 ```
-(paste the summary your model produced here)
+The decision follows a pilot programme in which twelve electric buses ran on the busiest routes for eighteen months. Officials said the pilot cut fuel and maintenance costs by almost a third compared with diesel buses on the same lines. Drivers also reported that the vehicles were quieter and easier to handle in heavy traffic.
 ```
 
+**Observation:** the model copies sentences from the start of the article and leaves out the main news (the approved fleet plan), the 7-2 vote details beyond the first paragraph, the cost and the objections. This is typical for models trained on news data (CNN/DailyMail), where the key facts usually come first.
 ## Parameters
 
 | Parameter | Meaning |
